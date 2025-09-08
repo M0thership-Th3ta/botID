@@ -6,7 +6,6 @@
 //Naam
 //Achternaam
 //Geboortedatum
-//Adres
 //BSN
 //Pasfoto
 //Gender?
