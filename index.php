@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-if (isset($_SESSION['Login']) != "true") {
-    header('location: login.php');
-    exit;
-}
+//if (isset($_SESSION['Login']) != "true") {
+//header('location: login.php');
+//exit;
+//}
 
 ?>
 
@@ -20,6 +20,17 @@ if (isset($_SESSION['Login']) != "true") {
     <script defer src="JS/index.js"></script>
 </head>
 <body>
-<h2>Test</h2>
+<header>
+    <nav>
+
+    </nav>
+</header>
+<main>
+    <h1>Welcome !</h1>
+    <a href="logout.php">Logout</a>
+</main>
+<footer>
+    <p>© 2024 BotID. All rights reserved.</p>
+</footer>
 </body>
 </html>
