@@ -2,7 +2,9 @@
 session_start();
 
 //Ben ik ingelogd?
-//Zo ja?
+if (isset($_SESSION['Login'])) {
+
+}
 //Haal ID gegevens op
 //Toon gegevens properly in HTML
 //Zo nee?
@@ -28,14 +30,15 @@ session_start();
 </head>
 <body>
 <header>
+    <h1>BotID</h1>
+</header>
+<main>
+    <h2>Welcome <?php htmlentities($name) ?>!</h2>
+    <div class="identification"></div>
+    <a href="logout.php">Logout</a>
     <nav>
 
     </nav>
-</header>
-<main>
-    <h1>Welcome !</h1>
-    <div class="identification"></div>
-    <a href="logout.php">Logout</a>
 </main>
 <footer>
     <p>© 2024 BotID. All rights reserved.</p>
