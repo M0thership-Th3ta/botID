@@ -3,7 +3,7 @@ session_start();
 
 //Ben ik ingelogd?
 if (isset($_SESSION['Login'])) {
-
+    $name = $_SESSION['name'];
 }
 //Haal ID gegevens op
 //Toon gegevens properly in HTML
@@ -26,7 +26,7 @@ if (isset($_SESSION['Login'])) {
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>BotID</title>
     <link href="CSS/style.css" rel="stylesheet">
-    <script defer src="JS/index.js"></script>
+    <script defer src="JS/menu.js"></script>
 </head>
 <body>
 <header>
