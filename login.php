@@ -1,7 +1,7 @@
 <?php
 /** @var mysqli $db */
 
-require_once 'includes/PHP/connection.php';
+require_once 'includes/connection.php';
 session_start();
 $login = false;
 
@@ -10,6 +10,7 @@ if (isset($_POST['submit'])) {
     $email = mysqli_escape_string($db, $_POST['email']);
     $password = mysqli_escape_string($db, $_POST['password']);
 
+    $errors = [];
     if ($email == '') {
         $errors['email'] = 'Uw email is verplicht';
     }
@@ -40,7 +41,8 @@ if (isset($_POST['submit'])) {
             if (password_verify($password, $users['password']) == true) {
                 $_SESSION['Login'] = true;
                 $_SESSION['email'] = $users['email'];
-                $_SESSION['admin_id'] = $users['admin_id'];
+                $_SESSION['name'] = $users['name'];
+                $_SESSION['admin'] = $users['admin'];
                 header('location: index.php');
                 exit();
             } else {
@@ -49,7 +51,6 @@ if (isset($_POST['submit'])) {
         }
     }
 }
-
 
 mysqli_close($db);
 ?>
@@ -78,11 +79,16 @@ mysqli_close($db);
     <p class="error">
         <?= $errors['password'] ?? '' ?>
     </p>
+
+    <p class="error">
+        <?= $errors['loginFailed'] ?? '' ?>
+    </p>
+
     <button class="button" type="submit" name="submit">Login</button>
     <p class="textStyle">
         Nog geen account?
     </p>
-    <a href="register.php">Registreren</a>
+    <a href="registry.php">Registreren</a>
 </form>
 </body>
 </html>
