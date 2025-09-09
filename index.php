@@ -10,10 +10,10 @@ if (isset($_SESSION['Login'])) {
 //Zo nee?
 //Redirect Naar login pagina
 
-//if (isset($_SESSION['Login']) != "true") {
-//header('location: login.php');
-//exit;
-//}
+else if (isset($_SESSION['Login']) != "true") {
+    header('location: login.php');
+    exit;
+}
 
 ?>
 
@@ -33,7 +33,7 @@ if (isset($_SESSION['Login'])) {
     <h1>BotID</h1>
 </header>
 <main>
-    <h2>Welcome <?php htmlentities($name) ?>!</h2>
+    <h2>Welcome <?= htmlentities($name) ?>!</h2>
     <div class="identification"></div>
     <a href="logout.php">Logout</a>
     <nav>
