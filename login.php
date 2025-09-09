@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
             if (password_verify($password, $users['password']) == true) {
                 $_SESSION['Login'] = true;
                 $_SESSION['email'] = $users['email'];
-                $_SESSION['name'] = $users['name'];
+                $_SESSION['name'] = $users['first_name'];
                 $_SESSION['admin'] = $users['admin'];
                 header('location: index.php');
                 exit();
