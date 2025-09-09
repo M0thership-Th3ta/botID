@@ -1,6 +1,13 @@
 <?php
 session_start();
 
+//Ben ik ingelogd?
+//Zo ja?
+//Haal ID gegevens op
+//Toon gegevens properly in HTML
+//Zo nee?
+//Redirect Naar login pagina
+
 //if (isset($_SESSION['Login']) != "true") {
 //header('location: login.php');
 //exit;
@@ -27,6 +34,7 @@ session_start();
 </header>
 <main>
     <h1>Welcome !</h1>
+    <div class="identification"></div>
     <a href="logout.php">Logout</a>
 </main>
 <footer>
