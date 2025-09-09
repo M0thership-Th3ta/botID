@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
                 $_SESSION['email'] = $users['email'];
                 $_SESSION['first_name'] = $users['first_name'];
                 $_SESSION['last_name'] = $users['last_name'];
-                $_SESSION['birthDate'] = $users['birthDate'];
+                $_SESSION['birthDate'] = $users['date_of_birth'];
                 $_SESSION['bsn'] = $users['bsn'];
                 $_SESSION['admin'] = $users['admin'];
                 header('location: index.php');
