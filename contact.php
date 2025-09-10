@@ -22,6 +22,7 @@ if (isset($_SESSION['Login'])) {
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>Contact</title>
     <link href="CSS/style.css" rel="stylesheet">
+    <link href="CSS/login.css" rel="stylesheet">
     <script defer src="JS/menu.js"></script>
 </head>
 <body>
@@ -31,7 +32,31 @@ if (isset($_SESSION['Login'])) {
 </header>
 <main>
     <h2>Contact</h2>
-    <p>Komt er nog aan!</p>
+    <form action="" method="post">
+        <div>
+            <label for="name">Naam:</label>
+            <input id="name" type="text" name="name" value="">
+        </div>
+
+        <div>
+            <label for="email">E-mail:</label>
+            <input id="email" type="email" name="email" value="">
+        </div>
+
+        <div>
+            <label for="subject">Onderwerp:</label>
+            <input id="subject" type="text" name="subject" value="">
+        </div>
+
+        <div>
+            <label for="question">Vraag/opmerking:</label>
+            <textarea name="question" rows="7" cols="30"></textarea>
+        </div>
+
+        <div>
+            <button class="button" type="submit" name="submit">Versturen</button>
+        </div>
+    </form>
 </main>
 <footer>
     <p>© 2024 BotID. All rights reserved.</p>

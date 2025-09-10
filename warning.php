@@ -1,15 +1,5 @@
 <?php
-session_start();
 
-if (isset($_SESSION['Login'])) {
-    $first_name = $_SESSION['first_name'];
-    $last_name = $_SESSION['last_name'];
-    $birthDate = $_SESSION['birthDate'];
-    $bsn = $_SESSION['bsn'];
-} else if (isset($_SESSION['Login']) != "true") {
-    header('location: login.php');
-    exit;
-}
 ?>
 
 <!doctype html>

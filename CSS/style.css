@@ -33,6 +33,11 @@ a {
     font-size: 1rem;
     margin: 0;
     text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: black;
 }
 
 @media (max-width: 800px) {
@@ -107,6 +112,7 @@ a {
         right: 0px;
         background: #3c74f1;
         text-align: center;
+        /*align-items: center;*/
     }
 
     ul {
@@ -115,6 +121,7 @@ a {
         flex-direction: column;
         gap: 1vh;
         padding: 0;
+        /*text-align: left;*/
     }
 
     footer {
