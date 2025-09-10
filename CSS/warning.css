@@ -1,0 +1,36 @@
+.simulation {
+    margin-top: 3vh;
+    width: 75%;
+}
+
+.social {
+    width: 100%;
+}
+
+@keyframes warning {
+    0% {
+        top: 25vh;
+        left: 27vw;
+        height: 40vh
+    }
+    50% {
+        top: 35vh;
+        left: 37vw;
+        height: 20vh
+    }
+    100% {
+        top: 25vh;
+        left: 27vw;
+        height: 40vh
+    }
+}
+
+.warning {
+    position: absolute;
+    top: 25vh;
+    left: 27vw;
+    height: 40vh;
+    animation-name: warning;
+    animation-duration: 5s;
+    animation-iteration-count: 10;
+}

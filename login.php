@@ -65,33 +65,47 @@ mysqli_close($db);
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="CSS/style.css" rel="stylesheet">
+    <link href="CSS/login.css" rel="stylesheet">
+    <script defer src="JS/menu.js"></script>
     <title>Login</title>
 </head>
 <body>
+<nav id="menu"></nav>
 <header>
-    <h2>Login</h2>
+    <h1>BotID</h1>
 </header>
-<form action="" method="post">
-    <label for="email">E-mail</label>
-    <input id="email" type="email" name="email" value="<?= htmlentities($email ?? '') ?>">
-    <p class="error">
-        <?= $errors['email'] ?? '' ?>
-    </p>
-    <label for="password">Wachtwoord</label>
-    <input id="password" type="password" name="password">
-    <p class="error">
-        <?= $errors['password'] ?? '' ?>
-    </p>
+<main>
+    <h2>Login</h2>
+    <form action="" method="post">
+        <div>
+            <label for="email">E-mail</label>
+            <input id="email" type="email" name="email" value="<?= htmlentities($email ?? '') ?>">
+            <p class="error">
+                <?= $errors['email'] ?? '' ?>
+            </p>
+        </div>
+        <div>
+            <label for="password">Wachtwoord</label>
+            <input id="password" type="password" name="password">
+            <p class="error">
+                <?= $errors['password'] ?? '' ?>
+            </p>
+        </div>
 
-    <p class="error">
-        <?= $errors['loginFailed'] ?? '' ?>
-    </p>
+        <p class="error">
+            <?= $errors['loginFailed'] ?? '' ?>
+        </p>
 
-    <button class="button" type="submit" name="submit">Login</button>
-    <p class="textStyle">
-        Nog geen account?
-    </p>
-    <a href="registry.php">Registreren</a>
-</form>
+        <button class="button" type="submit" name="submit">Login</button>
+    </form>
+    <div class="register">
+        <p> Nog geen account?</p>
+        <a href="registry.php">Registreren</a>
+    </div>
+</main>
+<footer>
+    <p>© 2024 BotID. All rights reserved.</p>
+</footer>
 </body>
 </html>

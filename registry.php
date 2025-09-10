@@ -96,57 +96,89 @@ mysqli_close($db);
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link href="CSS/style.css" rel="stylesheet">
+    <link href="CSS/login.css" rel="stylesheet">
+    <script defer src="JS/menu.js"></script>
+    <title>Registeren</title>
 </head>
 <body>
-<form action="" method="post">
-    <label for="firstName">Voornaam</label>
-    <input id="firstName" type="text" name="firstName" value="<?= htmlentities($firstName ?? '') ?>">
-    <p class="error">
-        <?= $errors['firstName'] ?? '' ?>
-    </p>
+<nav id="menu"></nav>
+<header>
+    <h1>BotID</h1>
+</header>
+<main>
+    <h2>Registeren</h2>
 
-    <label for="lastName">Achternaam</label>
-    <input id="lastName" type="text" name="lastName" value="<?= htmlentities($lastName ?? '') ?>">
-    <p class="error">
-        <?= $errors['lastName'] ?? '' ?>
-    </p>
+    <form action="" method="post">
+        <div>
+            <label for="firstName">Voornaam</label>
+            <input id="firstName" type="text" name="firstName" value="<?= htmlentities($firstName ?? '') ?>">
+            <p class="error">
+                <?= $errors['firstName'] ?? '' ?>
+            </p>
+        </div>
 
-    <label for="email">E-mail</label>
-    <input id="email" type="email" name="email" value="<?= htmlentities($email ?? '') ?>">
-    <p class="error">
-        <?= $errors['email'] ?? '' ?>
-        <?= $errors['dubbleMail'] ?? '' ?>
-    </p>
+        <div>
+            <label for="lastName">Achternaam</label>
+            <input id="lastName" type="text" name="lastName" value="<?= htmlentities($lastName ?? '') ?>">
+            <p class="error">
+                <?= $errors['lastName'] ?? '' ?>
+            </p>
+        </div>
 
-    <label for="birthDate">Geboortedatum</label>
-    <input type="date" name="birthDate" value="<?= htmlentities($birthDate ?? '') ?>">
-    <p class="error">
-        <?= $errors['birthDate'] ?? '' ?>
-    </p>
+        <div>
+            <label for="email">E-mail</label>
+            <input id="email" type="email" name="email" value="<?= htmlentities($email ?? '') ?>">
+            <p class="error">
+                <?= $errors['email'] ?? '' ?>
+                <?= $errors['dubbleMail'] ?? '' ?>
+            </p>
+        </div>
 
-    <label for="bsn">Bsn</label>
-    <input id="bsn" type="text" name="bsn" value="<?= htmlentities($bsn ?? '') ?>">
-    <p class="error">
-        <?= $errors['bsn'] ?? '' ?>
-    </p>
+        <div>
+            <label for="birthDate">Geboortedatum</label>
+            <input type="date" name="birthDate" value="<?= htmlentities($birthDate ?? '') ?>">
+            <p class="error">
+                <?= $errors['birthDate'] ?? '' ?>
+            </p>
+        </div>
 
-    <label for="password">Wachtwoord</label>
-    <input id="password" type="password" name="password">
-    <p class="error">
-        <?= $errors['password'] ?? '' ?>
-    </p>
+        <div>
+            <label for="bsn">Bsn</label>
+            <input id="bsn" type="text" name="bsn" value="<?= htmlentities($bsn ?? '') ?>">
+            <p class="error">
+                <?= $errors['bsn'] ?? '' ?>
+            </p>
+        </div>
 
-    <label for="passwordCheck">Herhaal wachtwoord</label>
-    <input id="passwordCheck" type="password" name="passwordCheck">
-    <p class="error">
-        <?= $errors['dubblePassword'] ?? '' ?>
-        <?= $errors['passwordCheck'] ?? '' ?>
-    </p>
+        <div>
+            <label for="password">Wachtwoord</label>
+            <input id="password" type="password" name="password">
+            <p class="error">
+                <?= $errors['password'] ?? '' ?>
+            </p>
+        </div>
 
-    <div class="registerStyle">
-        <button class="button" type="submit" name="submit">Registreren</button>
+        <div>
+            <label for="passwordCheck">Herhaal wachtwoord</label>
+            <input id="passwordCheck" type="password" name="passwordCheck">
+            <p class="error">
+                <?= $errors['dubblePassword'] ?? '' ?>
+                <?= $errors['passwordCheck'] ?? '' ?>
+            </p>
+        </div>
+
+        <div>
+            <button class="button" type="submit" name="submit">Registreren</button>
+        </div>
+    </form>
+    <div class="register">
+        <p>Al een account?</p>
+        <a href="login.php">Login</a>
     </div>
-</form>
+</main>
+<footer>
+    <p>© 2024 BotID. All rights reserved.</p>
+</footer>
 </body>
 </html>

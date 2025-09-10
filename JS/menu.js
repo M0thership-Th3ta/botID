@@ -15,6 +15,7 @@ function makeMenu() {
     const menuOption2 = document.createElement("a");
     const menuOption3 = document.createElement("a");
     const menuOption4 = document.createElement("a");
+    const menuOption5 = document.createElement("a");
     menuContent.classList.add("menu-toggle")
     menu.appendChild(menuContent);
 
@@ -32,12 +33,15 @@ function makeMenu() {
         menuOption3.href = "contact.php";
         menuOption4.textContent = "Log Uit";
         menuOption4.href = "logout.php";
+        menuOption5.textContent = "Waarschuwing"
+        menuOption5.href = "warning.php"
         menuDiv.appendChild(menuTitle);
         menuDiv.appendChild(menuUL)
         menuUL.appendChild(menuOption1)
         menuUL.appendChild(menuOption2)
         menuUL.appendChild(menuOption3)
         menuUL.appendChild(menuOption4)
+        menuUL.appendChild(menuOption5)
         menuContent.classList.toggle("disabled");
 
         document.addEventListener("click", closeMenuOnClickOutside);

@@ -1,4 +1,15 @@
 <?php
+session_start();
+
+if (isset($_SESSION['Login'])) {
+    $first_name = $_SESSION['first_name'];
+    $last_name = $_SESSION['last_name'];
+    $birthDate = $_SESSION['birthDate'];
+    $bsn = $_SESSION['bsn'];
+} else if (isset($_SESSION['Login']) != "true") {
+    header('location: login.php');
+    exit;
+}
 
 ?>
 
@@ -14,10 +25,16 @@
     <script defer src="JS/menu.js"></script>
 </head>
 <body>
-<nav id="menu">
-</nav>
+<nav id="menu"></nav>
 <header>
     <h1>BotID</h1>
 </header>
+<main>
+    <h2>Help</h2>
+    <p>Komt er nog aan!</p>
+</main>
+<footer>
+    <p>© 2024 BotID. All rights reserved.</p>
+</footer>
 </body>
 </html>
